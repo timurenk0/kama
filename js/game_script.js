@@ -4,7 +4,7 @@ import { updateElements } from "./value_assigner.js";
 const songList = Object.keys(songs);
 
 let songIndex = localStorage.getItem("currSongIndex") === null ? 0 : parseInt(localStorage.getItem("currSongIndex"));
-let score = 1;
+let score = localStorage.getItem("score") === null ? 1 : parseInt(localStorage.getItem("score"));
 
 const userInput = document.getElementById("user-input");
 const submitBtn = document.getElementById("submit");
@@ -44,10 +44,13 @@ submitBtn.addEventListener("click", () => {
     if (score === 5) {
         alert("Поздравляю! Ты открыла секрет");
         letterLink.classList.remove("disabled");
+    } else {
+
+        score++;
     }
-    score++;
 
     localStorage.setItem("currSongIndex", songIndex);    
+    localStorage.setItem("score", score);    
     updateGame(songIndex);
 });
 
