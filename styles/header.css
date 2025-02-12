@@ -1,0 +1,27 @@
+#header {
+    font-weight: 600;
+    
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    height: 50px;
+    
+    background-color: pink;
+    box-shadow: 1px 0px 4px 1px rgba(0,0,0,.5);
+    margin-bottom: 10px;
+}
+
+#header a {
+    text-decoration: none;
+    color: white;
+}
+
+#header a.active {
+    border-bottom: 3px solid white;
+}
+
+#header #letter.disabled {
+    color: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}

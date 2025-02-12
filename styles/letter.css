@@ -1,0 +1,73 @@
+.caveat {
+    font-family: "Caveat", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+
+#envelope {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100%;
+    width: 100%;
+    max-width: 100%;
+}
+
+#envelope img {
+    position: absolute;
+    width: 75%;
+    animation: bobbing_animation 2s ease-in-out infinite;
+}
+
+
+@keyframes bobbing_animation {
+    0% {
+        transform: translate(0, 0) rotate(0);
+    }
+    25% {
+        transform: translateY(-10px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, 0) rotate(0);
+    }
+    75% {
+        transform: translateY(-10px) rotate(-5deg);
+    }
+    100% {
+        transform: translate(0, 0) rotate(0);
+    }
+}
+
+
+#main {
+    display: block;
+    
+    font-family: "Caveat", serif;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 90%;
+    min-height: 100vh;
+    height: auto;
+
+    background-image: url("../images/paper.jpg");
+    background-size: contain;
+    background-repeat: repeat;
+    background-position: center center;
+    box-shadow: 1px 1px 6px 1px rgb(95, 95, 95);
+}
+
+#main p {
+    font-size: 20px;
+    align-self: baseline;
+    line-height: 28px;
+    overflow: hidden;
+    padding: 5px 3px;
+}
+
+
+
